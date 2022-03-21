@@ -1,7 +1,6 @@
 # Kiddocart 
-```
+
 is a e-learning site for kindergarten student
-```
 
 ## Project setup
 ```
