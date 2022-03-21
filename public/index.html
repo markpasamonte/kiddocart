@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product App</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div class="nav-bar">
@@ -26,8 +26,11 @@
                     <li v-for="detail in details">{{detail}}</li>
                 </ul>
 
-                <div v-for="variant in variants" :key="variant.variantId">
-                    <p @click="updateProduct(variant.variantImage)"><button>{{variant.variantColor}}</button></p>
+                <div v-for="variant in variants"
+                     :key="variant.variantId"
+                      class="color-box"
+                      :style="{backgroundColor: variant.variantColor}"
+                    @mouseover="updateProduct(variant.variantImage)">
 
                 </div>
 
@@ -44,7 +47,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="../main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
